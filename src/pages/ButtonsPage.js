@@ -1,10 +1,12 @@
 import Button from "../components/Button"
 
-function Buttons(){
+function ButtonsPage(){
+    const handleClick=()=>{console.log("click");}
+    const handleMouseOver=()=>{console.log("mouse over click");}
     return (<div >
-         <Button primary>Primary</Button>
+         <Button primary onClick={handleClick}>Primary</Button>
          <Button secondary>Secondary</Button>
-         <Button success>Success</Button>
+         <Button success onMouseOver={handleMouseOver}>Success</Button>
          <Button warning>warning</Button>
          <Button danger>Danger</Button>
          <Button outline>Outline</Button>
@@ -37,4 +39,4 @@ function Buttons(){
     </div>)
 }
     
-export default Buttons
+export default ButtonsPage
