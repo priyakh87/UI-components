@@ -1,14 +1,17 @@
 
 import './App.css';
-import DropDownPage from './pages/DropdownPage';
-import ButtonsPage from './pages/ButtonsPage';
-import AccordionsPage from './pages/AccordionPage';
+import SideBar from './components/SideBar';
+import Router from './pages/Router';
+
 function App() {
   return (
-    <div className="App min-h-screen justify-center flex flex-col">
-   <ButtonsPage/>
-   <AccordionsPage/>
-   <DropDownPage />
+    <div className="App min-h-screen  flex ">
+      <div className='w-1/4 bg-gray-200' >
+      <SideBar/>
+      </div>
+      <div className='content'>
+      
+      <div><Router /></div></div>
     </div>
   );
 }
