@@ -5,7 +5,8 @@ const navigationLink=[
     {label:'button',path:'/button'},
     {label:'accordion',path:'/accordion'},
     {label:'dropDown',path:'/dropdown'},
-    {label:'modal',path:'/modal'}
+    {label:'modal',path:'/modal'},
+    {label:'tabel',path:'/table'}
 ]
 
 const renderNavLinks=navigationLink.map((link)=>{

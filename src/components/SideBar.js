@@ -1,8 +1,8 @@
 import NavigationBar from "./NavigationBar"
 
-function SideBar(){
+function  SideBar(){
     return<>
-    <div className="p-1.5"><NavigationBar/></div>
+    <div className="p-1.5 sidebar"><NavigationBar/></div>
     
     
     </>
