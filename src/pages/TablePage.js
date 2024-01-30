@@ -1,9 +1,11 @@
+import SortableTable from "../components/SortableTable";
 import Table from "../components/Table"
 
 const config=[
     {
         label:'Name',
-        render:(data)=>data.name
+        render:(data)=>data.name,
+        sortValue:(data)=>data.name
     },
     {
         label:'Color',
@@ -11,23 +13,26 @@ const config=[
     },
     {
         label:'Price',
-        render:(data)=>data.price
+        render:(data)=>data.price,
+        sortValue:(data)=>data.price
     },
     {
         label:'Quantity',
-        render:(data)=>data.quantity
+        render:(data)=>data.quantity,
+        sortValue:(data)=>data.quantity
     },
     {
         label:'Total',
         render:(data)=>data.total,
-        header:()=><th className="bg-red-500">Score</th>
+        sortValue:(data)=>data.total
+        // header:()=><th className="bg-red-500">Score</th>
     }
 ]
 const data = [
-    { name: "Apple",color:"bg-orange-600", price: "80", quantity : "3", total : "240" },
-    { name: "Orance",color:"bg-slate-950", price: "50", quantity : "4", total : "200" },
-    { name: "Banana",color:"bg-amber-600", price: "20", quantity : "8", total : "160" },
-    { name: "Cherry",color:"bg-lime-600", price: "250", quantity : "10",total : "2500" }
+    { name: "Apple",color:"bg-orange-600", price: 80, quantity : 3, total : 240 },
+    { name: "Orange",color:"bg-slate-950", price: 50, quantity : 4, total : 200 },
+    { name: "Banana",color:"bg-amber-600", price: 20, quantity : 8, total : 160 },
+    { name: "Cherry",color:"bg-lime-600", price: 250, quantity : 10,total : 2500 }
 ];
 
 const config1=[
@@ -47,7 +52,7 @@ const keyFn=(data)=>{
 function TablePage(){
     return (
         <>
-        <Table data={data} config={config} keyFn={keyFn} />
+        <SortableTable data={data} config={config} keyFn={keyFn} />
 
         <hr/>
         <Table data={data1} config={config1} keyFn={keyFn} />

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
-import { IoMdCloseCircle } from "react-icons/io";
+
 function Modal({children,onClose,actionBar}){
 
     useEffect(()=>{
@@ -15,8 +15,7 @@ function Modal({children,onClose,actionBar}){
     <div className="relative max-w-screen-md">
         <div onClick={onClose} className="fixed inset-0 bg-gray-300 opacity-80"></div>
         <div className="fixed inset-40 p-10 bg-white w-1/2 m-auto">
-            <div className="flex justify-end"><IoMdCloseCircle onClick={onClose} className="text-lg cursor-pointer"/></div>
-            <div className="flex flex-col h-full justify-between">
+            <div className="flex flex-col h-full justify-between overflow-y-hidden">
             {children}
             <div className="flex justify-end">{actionBar}</div>
             

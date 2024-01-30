@@ -9,7 +9,7 @@ function Table({data,config,keyFn}){
         }
 
         return(
-            <th key={keyFn(col.label)} className="p-2">{col.label}</th>
+            <th key={col.label} className="p-2">{col.label}</th>
         )
     })
 
@@ -20,7 +20,7 @@ function Table({data,config,keyFn}){
                     <td className="p-2" key={col.label} >{col.render(item)}</td>            
             )
         })
-        return(<tr  className="border-b-2">
+        return(<tr  className="border-b-2" key={item.name}>
                 {renderRows}
         </tr>)  
     })
